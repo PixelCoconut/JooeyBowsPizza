@@ -1,0 +1,10 @@
+CREATE TABLE orders (
+ordid INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+cust_id INT NOT NULL ,
+cr_type VARCHAR(20) NOT NULL ,
+cr_no BIGINT(15) NOT NULL ,
+cr_name VARCHAR(40) NOT NULL ,
+cr_exp VARCHAR(5) NOT NULL ,
+ordstat VARCHAR(20) DEFAULT 'PENDING' ,
+FOREIGN KEY (cust_id) REFERENCES customers(cust_id)
+);
